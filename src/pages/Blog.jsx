@@ -44,6 +44,7 @@ function Blog() {
 
   /* searching tools blogs  */
   const onSubmit = () => {
+    setToolId('')
     let filter = blog.filter((res) => {
       let strings = formattingTag(res.toolID);
       search.toLowerCase();
@@ -51,6 +52,7 @@ function Blog() {
       if (strings.includes(captilize)) {
         return res;
       }
+      return false
     });
 
     setFilterBlog(filter);

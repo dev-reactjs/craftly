@@ -7,9 +7,9 @@ function Breadcrumbs() {
   return (
     <>
       <Breadcrumb separator=">">
-        <Breadcrumb.Item>Ant Design</Breadcrumb.Item>
+        <Breadcrumb.Item>Home</Breadcrumb.Item>
         <Breadcrumb.Item>
-          <a href="">Component</a>
+          Blog
         </Breadcrumb.Item>
       </Breadcrumb>
     </>

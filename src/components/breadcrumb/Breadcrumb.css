@@ -5,13 +5,15 @@
 }
 
 .ant-breadcrumb ol {
-    color: #7160FB;
+    color: rgba(0, 0, 0, 0.85);;
     font-size: 18px;
     font-family: 'Poppins' !important;
     line-height: 21.6px;
     list-style: none;
 }
-
+.ant-breadcrumb li:last-child{
+    color: #7160FB;
+}
 .ant-breadcrumb li {
     font-family: 'Poppins', sans-serif;
 }
