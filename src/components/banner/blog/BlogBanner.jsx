@@ -18,7 +18,6 @@ function BlogBanner({ searchBar, search, handleSubmit }) {
             <BannerTitle>
               Top product news, content marketing tips, and insights.
             </BannerTitle>
-
             <SearchContainer>
               <SearchInput
                 type="text"
