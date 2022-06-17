@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/header/Header";
+import Blog from "./pages/Blog";
+import { ThemeProvider } from "styled-components";
+import "./css/common.css";
 
+/* styled component customisation */
+const theme = {
+  dark: {
+    primary: "#9979FD",
+    text: "#fff",
+  },
+  light: {
+    primary: "#fff",
+    text: "#9979FD",
+  },
+};
+
+/* main App*/
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Header />
+      <Blog />
+    </ThemeProvider>
   );
 }
 

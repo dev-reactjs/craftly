@@ -1,0 +1,21 @@
+.ant-breadcrumb {
+    padding: 25px 0px 25px 95px;
+    margin: 0px;
+    display: flex;
+}
+
+.ant-breadcrumb ol {
+    color: #7160FB;
+    font-size: 18px;
+    font-family: 'Poppins' !important;
+    line-height: 21.6px;
+    list-style: none;
+}
+
+.ant-breadcrumb li {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ant-breadcrumb-link:hover {
+    color: #7160FB;
+}
