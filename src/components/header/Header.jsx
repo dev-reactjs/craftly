@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <MainHeader>
-        <Img src={logo} alt="craftly" />
+        <Img src={logo} alt="craft" />
         <Div>
           <Button>Login</Button>
           <Button color={"active"}>Sign Up</Button>
