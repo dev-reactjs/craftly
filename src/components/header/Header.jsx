@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../images/logo.svg";
 import { MainHeader, Img, Div, Button } from "./HeaderStyle.js";
 
-function Header() {
+function Headers() {
   return (
     <>
       <MainHeader>
@@ -16,4 +16,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Headers;

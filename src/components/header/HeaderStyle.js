@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { Col,Layout,Image } from 'antd';
 
-export const MainHeader = styled.header`
+const { Header } = Layout;
+
+export const MainHeader = styled(Header)`
   height: 100px;
   background-color: #ffffff;
   padding: 0px 120px;
@@ -8,7 +11,7 @@ export const MainHeader = styled.header`
   justify-content: space-between;
   flex-direction: row;
 `;
-export const Img = styled.img`
+export const Img = styled(Image)`
   height: 50px;
   margin: 28px 0px;
 `;
