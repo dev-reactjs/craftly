@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Col,Layout,Image } from 'antd';
+import {  Layout, Image, Button } from "antd";
 
 const { Header } = Layout;
 
@@ -14,31 +14,36 @@ export const MainHeader = styled(Header)`
 export const Img = styled(Image)`
   height: 50px;
   margin: 28px 0px;
+  .ant-image-mask {
+    display: none;
+  }
 `;
 
 export const Div = styled.div`
-  padding: 30px 0px;
+  padding: 20px 0px;
   height: 40px;
 `;
 
-export const Button = styled.button`
-  background-color: ${(props) =>
-    props.color === "active"
-      ? props.theme.dark.primary
-      : props.theme.dark.text};
-  border: none;
-  color: ${(props) =>
-    props.color === "active"
-      ? props.theme.light.primary
-      : props.theme.light.text};
-  padding: 9px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 600;
-  margin-left: 10px;
-  border-radius: 30px;
-  border: 1px solid #9979fd;
+export const HomeButton = styled(Button)`
+  &&& {
+    background-color: ${(props) =>
+      props.color === "active"
+        ? props.theme.dark.primary
+        : props.theme.dark.text};
+    border: none;
+    color: ${(props) =>
+      props.color === "active"
+        ? props.theme.light.primary
+        : props.theme.light.text};
+    padding: 4px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-left: 10px;
+    border-radius: 30px;
+    border: 1px solid #9979fd;
+  }
 `;

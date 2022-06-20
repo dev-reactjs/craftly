@@ -20,8 +20,7 @@ function BlogList({ blog }) {
         <ListBlog>
           {blog?.map((res, i) => {
             return (
-              <BlogLists key={i}>
-                <Img src={blogplaceholder} />
+              <BlogLists key={i} cover={<Img src={blogplaceholder} />}>
                 <BlogContent>
                   <Span>{formattingTag(res?.toolID)}</Span>
                   <BlogTitle>

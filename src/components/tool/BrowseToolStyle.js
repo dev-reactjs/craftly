@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Card } from "antd";
+
+const { Meta } = Card;
 
 export const ToolSection = styled.div`
   margin-top: 23px;
@@ -35,7 +38,11 @@ export const ToolList = styled.li`
   list-style: none;
 `;
 
-export const ParticularList = styled.a`
+export const ParticularList = styled(Card)`
+  .ant-card-body {
+    padding: 0;
+  }
+  
   flex-direction: column;
   display: flex;
   width: 214px;
@@ -52,10 +59,13 @@ export const ParticularList = styled.a`
   box-shadow: ${(props) =>
     props.active && "0px 23.5px 23.5px rgba(95, 103, 117, 7%)"};
   &:hover {
-    color: #fff;
+    color: #fff !important;
     background: #8878f9;
     background: linear-gradient(90deg, #8878f9 0%, #6c5afb 100%);
     box-shadow: 0px 23.5px 23.5px rgba(95, 103, 117, 7%);
+    .ant-card-meta-title{
+      color:#fff
+    }
   }
 `;
 
@@ -63,13 +73,16 @@ export const Img = styled.img`
   width: 55px;
 `;
 
-export const Para = styled.p`
-  margin: 0px;
-  padding: 0px;
-  min-height: 70px;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  word-break: ${(props) =>
-    props.break === "word_break" ? "break-all" : "none"};
+export const Para = styled(Meta)`
+  .ant-card-meta-title {
+    margin: 0px;
+    padding: 0px;
+    min-height: 70px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    word-break: ${(props) =>
+      props.break === "word_break" ? "break-all" : "none"};
+    white-space: break-spaces;
+  }
 `;

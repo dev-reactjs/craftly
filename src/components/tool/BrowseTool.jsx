@@ -19,13 +19,14 @@ function BrowseTool({ tools, onClickTools, toolId }) {
           <ToolListSection>
             {tools?.map((res) => (
               <ToolList key={res?.id} onClick={() => onClickTools(res?.id)}>
-                <ParticularList active={res?.id === toolId}>
-                  <Img src={res?.img} />
+                <ParticularList
+                  active={res?.id === toolId}
+                  cover={<Img src={res?.img} />}
+                >
                   <Para
+                    title={res?.title}
                     break={res?.title === "Recommendation" ? "word_break" : ""}
-                  >
-                    {res?.title}
-                  </Para>
+                  />
                 </ParticularList>
               </ToolList>
             ))}

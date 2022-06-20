@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { Card } from "antd";
+
+const { Meta } = Card;
 
 export const MainBlog = styled.div`
   max-width: 1200px;
@@ -14,8 +17,14 @@ export const ListBlog = styled.div`
   flex-wrap: wrap;
 `;
 
-export const BlogLists = styled.div`
+export const BlogLists = styled(Card)`
   max-width: 379px;
+  border-radius: 15px;
+  border: 0;
+  margin-bottom: 25px;
+  .ant-card-body {
+    padding: 0;
+  }
 `;
 
 export const Img = styled.img`

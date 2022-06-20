@@ -1,7 +1,11 @@
 import styled from "styled-components";
+import { Input} from 'antd';
 import card from "../../../images/banner_card_bg.svg";
 import icon from "../../../images/banner_top_bg.svg";
 import hand from "../../../images/banner_hand_bg.svg";
+
+
+const { Search } = Input;
 
 export const BannerSection = styled.div`
   width: 100%;
@@ -66,15 +70,29 @@ export const SearchContainer = styled.div`
   position: relative;
 `;
 
-export const SearchInput = styled.input`
+export const SearchInput = styled(Search)`
   height: 62px;
   width: 100%;
   background: #fff;
   border-radius: 15px;
-  padding: 0 25px;
   border: 0px;
   &:focus {
     outline: none;
+  }
+  .ant-input-group .ant-input{
+    height:62px;
+    border-radius:15px 0 0 15px;
+    width:88%;
+    border:0
+  }
+  .ant-input-group-addon{
+    border-radius:15px;
+  }
+  .ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus{
+    border-color:white;
+  }
+  .ant-input-group .ant-input:hover{
+    z-index:0;
   }
 `;
 
@@ -94,7 +112,8 @@ export const SearchButton = styled.button`
   line-height: 24px;
   &:hover {
     background: #8878f9;
-    background: linear-gradient(90deg, #8878f9 0%, #9b72fa 100%);
-    color: #fff;
+    background: linear-gradient(285.83deg, #9278F9 -34.95%, #6C5AFB 92.08%);
+    box-shadow:0px 34px 35px -23.4967px rgba(95, 103, 117, 0.25);
+    color: #fff !important;
   }
 `;
